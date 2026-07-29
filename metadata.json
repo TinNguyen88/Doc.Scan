@@ -1,0 +1,10 @@
+{
+  "name": "Document Scanner - Nguyễn Trung Tín",
+  "description": "Ứng dụng quét tài liệu chuyên nghiệp bản thật chính thức. Tạo PDF chất lượng cao, OCR nhận diện văn bản & quản lý tệp - Nguyễn Trung Tín (SĐT: 0977 530 943, Email: trungtin8881@gmail.com)",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
