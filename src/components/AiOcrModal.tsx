@@ -56,6 +56,13 @@ export const AiOcrModal: React.FC<AiOcrModalProps> = ({
         })
       });
 
+      if (!res.ok) {
+        if (res.status === 404) {
+          throw new Error('Tính năng AI OCR yêu cầu backend Node.js server. Khi chạy trên GitHub Pages tĩnh (Static Host), hãy sử dụng trên server Node.js hoặc Cloud Run.');
+        }
+        throw new Error(`Máy chủ phản hồi lỗi: ${res.statusText || res.status}`);
+      }
+
       const data = await res.json();
 
       if (data.success && data.text) {
