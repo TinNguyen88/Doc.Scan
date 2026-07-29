@@ -94,13 +94,13 @@ export const AiOcrModal: React.FC<AiOcrModalProps> = ({
   };
 
   const handleDownloadTxt = () => {
-    const element = document.createElement('a');
+    const element = window.document.createElement('a');
     const file = new Blob([extractedText], { type: 'text/plain;charset=utf-8' });
     element.href = URL.createObjectURL(file);
     element.download = `${document.title}_OCR_NguyenTrungTin.txt`;
-    document.body.appendChild(element);
+    window.document.body.appendChild(element);
     element.click();
-    document.body.removeChild(element);
+    window.document.body.removeChild(element);
   };
 
   return (
